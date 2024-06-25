@@ -1,0 +1,80 @@
+{
+    "Genres": [
+        {
+            "GenreID": 28,
+            "GenreName": "Action"
+        },
+        {
+            "GenreID": 12,
+            "GenreName": "Adventure"
+        },
+        {
+            "GenreID": 16,
+            "GenreName": "Animation"
+        },
+        {
+            "GenreID": 35,
+            "GenreName": "Comedy"
+        },
+        {
+            "GenreID": 80,
+            "GenreName": "Crime"
+        },
+        {
+            "GenreID": 99,
+            "GenreName": "Documentary"
+        },
+        {
+            "GenreID": 18,
+            "GenreName": "Drama"
+        },
+        {
+            "GenreID": 10751,
+            "GenreName": "Family"
+        },
+        {
+            "GenreID": 14,
+            "GenreName": "Fantasy"
+        },
+        {
+            "GenreID": 36,
+            "GenreName": "History"
+        },
+        {
+            "GenreID": 27,
+            "GenreName": "Horror"
+        },
+        {
+            "GenreID": 10402,
+            "GenreName": "Music"
+        },
+        {
+            "GenreID": 9648,
+            "GenreName": "Mystery"
+        },
+        {
+            "GenreID": 10749,
+            "GenreName": "Romance"
+        },
+        {
+            "GenreID": 878,
+            "GenreName": "Science Fiction"
+        },
+        {
+            "GenreID": 10770,
+            "GenreName": "TV Movie"
+        },
+        {
+            "GenreID": 53,
+            "GenreName": "Thriller"
+        },
+        {
+            "GenreID": 10752,
+            "GenreName": "War"
+        },
+        {
+            "GenreID": 37,
+            "GenreName": "Western"
+        }
+    ]
+}
