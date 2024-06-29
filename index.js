@@ -12,6 +12,7 @@ app.use(logger);
 app.use("/", express.static(path.join(__dirname, "public")));
 app.use("/", require("./routes/root"));
 app.use("/movies", require("./routes/movies"));
+app.use("/users", require("./routes/users"));
 
 app.all("*", (req, res) => {
   res.status(404);

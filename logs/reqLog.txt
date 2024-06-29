@@ -288,3 +288,9 @@
 20240629	09:25:56	19116daa-213d-4613-b18f-4fae48dca10a	GET	undefined	/js/cargar_peliculas_index.js
 20240629	09:25:56	3e24de81-d285-4854-ba62-a67f65c3ff5d	GET	undefined	/imgs/flecha-hacia-arriba.png
 20240629	09:25:56	fc22ed4c-35c3-443a-90df-1bdb6a44e52c	GET	undefined	/imgs/banner-bg.jpg
+20240629	09:50:40	0029959b-1514-453e-b4ad-b490808cf7c3	GET	undefined	/views/registrarse.html
+20240629	09:50:40	01b797f7-eebb-4c56-b866-41d51a530146	GET	undefined	/css/style.css
+20240629	09:50:43	584933a9-0bc0-4bc1-af2b-63d6351d90d5	GET	undefined	/views/iniciosesion.html
+20240629	09:50:43	389ab972-210c-4159-ac88-6934e6f1db9f	GET	undefined	/css/style.css
+20240629	09:50:46	8bd850f8-4fdd-4027-8e42-dd30f2cfb39c	GET	undefined	/views/iniciosesion.html
+20240629	09:50:46	6dc24fdc-7bb9-4324-837b-2775090fcd8b	GET	undefined	/css/style.css

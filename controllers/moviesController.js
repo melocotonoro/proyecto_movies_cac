@@ -19,7 +19,6 @@ const getMovie = async (req, res) => {
       return res.status(404).type("txt").send("404 Not Found");
     }
     res.json(movie);
-    console.log(movie);
   } catch (error) {
     res.status(404).type("txt").send("404 Not Found");
   }
