@@ -294,3 +294,10 @@
 20240629	09:50:43	389ab972-210c-4159-ac88-6934e6f1db9f	GET	undefined	/css/style.css
 20240629	09:50:46	8bd850f8-4fdd-4027-8e42-dd30f2cfb39c	GET	undefined	/views/iniciosesion.html
 20240629	09:50:46	6dc24fdc-7bb9-4324-837b-2775090fcd8b	GET	undefined	/css/style.css
+20240629	10:00:01	4b713534-ab84-48a4-bf2a-b0a87a03823a	GET	undefined	/
+20240629	10:00:01	b7c093e1-1246-439b-9b3d-0d58ac4ee8f3	GET	undefined	/css/style.css
+20240629	10:00:01	31176f13-a6d8-456a-b9cf-ad21435229bd	GET	undefined	/js/cargar_peliculas_index.js
+20240629	10:00:02	938c73a9-5fde-43f3-8ef0-7052f2b63fe5	GET	undefined	/imgs/flecha-hacia-arriba.png
+20240629	10:00:02	fd7f2d7c-ad41-4e75-a7bd-0c748266268f	GET	undefined	/imgs/banner-bg.jpg
+20240629	10:00:10	7154139b-524f-407b-ab96-5be7cc658464	GET	undefined	/movies/
+20240629	10:00:10	8e083886-6c27-40de-9e60-bc418f05670d	GET	undefined	/favicon.ico
