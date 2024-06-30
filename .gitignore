@@ -8,3 +8,7 @@ node_modules/
 .env.production.local
 .env.local
 
+# other
+docker*
+docker-compose.yml
+*.log
