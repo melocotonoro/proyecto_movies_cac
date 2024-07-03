@@ -4,7 +4,9 @@
   "description": "Proyecto final de back end del curso de codo a codo",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "author": "Grupo 18",
   "license": "ISC",
@@ -13,5 +15,8 @@
     "express": "^4.19.2",
     "mysql2": "^3.10.1",
     "uuid": "^10.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
   }
 }

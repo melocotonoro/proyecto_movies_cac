@@ -1,6 +1,5 @@
 const express = require("express");
 const moviesController = require("../controllers/moviesController");
-const { route } = require("./root");
 
 const router = express.Router();
 
