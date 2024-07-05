@@ -1,0 +1,12 @@
+post  http://localhost:3500/users HTTP/1.1
+
+{
+        "UserID": 8,
+        "Name": "Jose",
+        "Surname": "Hermandez",
+        "Email": "johndoe@example.com",
+        "Password": "hashed_password_123",
+        "Birthday": "1990-05-15",
+        "ProfilePicture": "https://example.com/profile.jpg",
+        "Countries_CountryID": 7
+    },
