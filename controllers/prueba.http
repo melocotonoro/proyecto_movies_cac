@@ -1,14 +1,39 @@
-POST http://localhost:3500/users HTTP/1.1
-
+GET http://localhost:3500/movies HTTP/1.1
 
 Content-Type: application/json
-{
-        "UserID": 8,
-        "Name": "Jose",
-        "Surname": "Hermandez",
-        "Email": "johndoe@example.com",
-        "Password": "hashed_password_123",
-        "Birthday": "1990-05-15",
-        "ProfilePicture": "https://example.com/profile.jpg",
-        "Countries_CountryID": 7
-}
+###
+GET http://localhost:3500/movies/1 HTTP/1.1
+Content-Type: application/json
+###
+GET http://localhost:3500/users HTTP/1.1
+Content-Type: application/json
+###
+GET http://localhost:3500/localhost:3500/users/1 HTTP 1.1
+Content-Type: application/json
+###
+POST http://localhost:3500/users
+Content-Type: application/json
+
+        {
+            "Name":"Rocio",
+            "Surname": "Sanchez",
+            "Email": "rociosanchez34@gmail.com",
+            "Password":"hashed_password_hijk",
+            "Birthday":"1990-06-28",
+            "ProfilePicture":"https://example.com/profile8.jpg",
+            "Countries_CountryID":7
+        }
+
+###
+PUT http://localhost:3500/users/6
+Content-Type: application/json
+
+        {
+            "Name":"Analia",
+            "Surname": "Sanchez",
+            "Email": "rociosanchez34@gmail.com",
+            "Password":"hashed_password_hijk",
+            "Birthday":"1990-06-28",
+            "ProfilePicture":"https://example.com/profile8.jpg",
+            "Countries_CountryID":7
+        }

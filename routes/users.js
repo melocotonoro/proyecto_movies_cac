@@ -12,7 +12,7 @@ router
 router
 .route("/:id")
 .get(usersControllers.getUsersByID)
-//.delete(usersControllers.deleteUsers)
-//.put(usersControllers.updateUsers);
+.put(usersControllers.updateUsers)
+//.delete(usersControllers.deleteUsers);
 
 module.exports=router;
