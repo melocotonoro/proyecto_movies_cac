@@ -2,7 +2,7 @@ const pool = require("./connectionMysql.js");
 const dbUser= require("../data/users.json")
 const fs = require('fs');
 
-
+//Leer el Json 
 
 const readFiles = (dbUser) => {
     return new Promise((resolve, reject) => {
@@ -18,17 +18,18 @@ const readFiles = (dbUser) => {
     });
 };
 
-
+ //Obtener todos los usuarios 
 const getUsers = async (req, res) => {
     try {
         const users = await readFiles('./data/users.json');
-        res.json(users);
+            res.json(users);
 } 
     catch (err) {
         res.status(500).json({ error: 'No users list were found matching your selection.' });
 }
 };
 
+//Obtener usuarios por ID
 const getUsersByID= async (req,res)=>{
     try{
         const read_user= await readFiles("./data/users.json");
@@ -41,6 +42,7 @@ const getUsersByID= async (req,res)=>{
 }
 };
 
+//Escribir en el Json 
 const writeFiles = (filePath, data) => {
     return new Promise((resolve, reject) => {
         fs.writeFile(filePath, JSON.stringify(data), (err) => {
@@ -50,7 +52,7 @@ const writeFiles = (filePath, data) => {
     });
 };
 
-
+//Crear un usuario
 const createUsers= async (req,res) =>{
     try {
         const users = await readFiles('./data/users.json');
@@ -65,50 +67,55 @@ const createUsers= async (req,res) =>{
             Countries_CountryID:req.body.Countries_CountryID
         }
         
-        users.push(newUser);
-        await writeFiles('./data/users.json', users);
-        res.status(201).json(newUser);
+            users.push(newUser);
+                await writeFiles('./data/users.json', users);
+                    res.status(201).json(newUser);
     } 
     catch (err) {
         res.status(500).json({ err: 'Error loading data' });
     }
 };
 
+//Actualizar un usuario
 const updateUsers= async (req,res)=>{
-try{
-    const read_user= await fs.readFile('./data/users.json');
-const id_User=parseInt(req.params.id)
+    try{
+        const users = await readFiles('./data/users.json');
+        const id_User=parseInt(req.params.id)
 
-const search_Id= read_user.findIndex(i=>i.UserID === id_User)
+        const search_Id= users.findIndex(i=>i.UserID === id_User)
 
-const new_files= {
-    UserID: req.body.UserID,
-    Name:req.body.Name,
-    Surname: req.body.Surname,
-    Email: req.body.Email,
-    Password:req.body.Password,
-    Birthday:req.body.Birthday,
-    ProfilePicture:req.body.ProfilePicture,
-    Countries_CountryID:req.body.Countries_CountryID
-}
+            if(search_Id ===-1) res.status(404).json({err:"User not found. Try again"});
 
-if(!search_Id) res.status(404).json({err:"User no fount. Try again"});
+                users[search_Id]={...users[search_Id], ...req.body};
 
-
-
-read_user[search_Id]={...read_user[search_Id], ...new_files};
-
-await fs.writeFile('./data/users.json',readFiles)
-
-res.json(read_user[search_Id])
+                    await writeFiles('./data/users.json', users)
+                        res.json(users[search_Id])
 
 }
-catch(err){
-    res.status(500).json({err:'Files users no update.Try again'})
+    catch(err){
+        res.status(500).json({err:'User not update.Try again'})
 }
 }
 
+//Eliminar usuario
+
+const deleteUsers= async(req,res)=>{
+    try {
+        const users= await readFiles('./data/users.json')
+        const id_User=parseInt(req.params.id)
+            const search_Id= users.findIndex(e=>e.UserID === id_User)
+
+                if (search_Id >= 0) {
+                    users.splice(search_Id, 1);
+            }
+                res.json(users);
+
+            await writeFiles('./data/users.json', users)
+        
+    } catch (err) {
+        res.json({err:'User not delete.Try again'})
+    }
+}
 
 
-
-module.exports={getUsers,getUsersByID,createUsers,updateUsers}
+module.exports={getUsers,getUsersByID,createUsers,updateUsers,deleteUsers}

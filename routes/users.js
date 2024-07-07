@@ -13,6 +13,6 @@ router
 .route("/:id")
 .get(usersControllers.getUsersByID)
 .put(usersControllers.updateUsers)
-//.delete(usersControllers.deleteUsers);
+.delete(usersControllers.deleteUsers);
 
 module.exports=router;
